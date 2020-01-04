@@ -16,4 +16,5 @@
 
 ## Commands
 - ``` !bots ``` **Returns the number of bots actives.**
-- ``` !udpflood.start 
+- ``` !udpflood.start IP:PORT ``` **Starts UDP Flood DDos Attack, with 255 threads**
+- ``` !udpflood.stop ``` **Stop the attack**
