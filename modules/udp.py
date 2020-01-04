@@ -1,7 +1,6 @@
 import socket
 from random import _urandom
 from threading import Thread
-from time import sleep
 
 atacar = True
 
