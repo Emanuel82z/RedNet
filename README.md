@@ -13,3 +13,7 @@
 
 ### root_cient: Connects to the server, and allows you to send commands to the bots.
 - ``` python root_client.py ``` **(python2)**
+
+## Commands
+- ``` !bots ``` **Returns the number of bots actives.**
+- ``` !udpflood.start 
