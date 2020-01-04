@@ -18,3 +18,6 @@
 - ``` !bots ``` **Returns the number of bots actives.**
 - ``` !udpflood.start IP:PORT ``` **Starts UDP Flood DDos Attack, with 255 threads**
 - ``` !udpflood.stop ``` **Stop the attack**
+
+## Modify it
+- **user_required and pass_required on server.py (It is the username and password that the attacker will use to control the bots.)**
