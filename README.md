@@ -8,6 +8,9 @@
 ### Server: Accepts connections and redirects commands to bots
 - ``` python3 server.py ``` **(python3)**
 
-### Client: 
+### Client: Connects to the server, waits for commands, and executes them.
+- ``` python client.py ``` **(python2)**
+
+
 
 
