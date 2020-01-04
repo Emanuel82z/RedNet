@@ -5,6 +5,8 @@
 
 ## Usage
 
-#### First start the server
+### Server: Accepts connections and redirects commands to bots
+
+### Client: 
 - ``` python3 server.py ```
 
