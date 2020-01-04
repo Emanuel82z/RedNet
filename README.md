@@ -4,3 +4,7 @@
 > Is under development
 
 ## Usage
+
+#### First start the server
+- ``` python3 server.py ```
+
