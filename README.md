@@ -6,7 +6,7 @@
 ## Usage
 
 ### Server: Accepts connections and redirects commands to bots
-- ``` python3 server.py ```
+- ``` python3 server.py ``` **(python3)**
 
 ### Client: 
 
