@@ -4,10 +4,10 @@ from threading import Thread
 clients = {}
 addresses = {}
 
-HOST = '127.0.0.1'
+IP = '127.0.0.1'
 PORT = 4444
 BUFSIZ = 1024
-ADDR = (HOST, PORT)
+ADDR = (IP, PORT)
 
 user_required = 'admin'
 pass_required = 'admin'
@@ -60,7 +60,7 @@ def broadcast(msg):
 
 if __name__ == "__main__":
     SERVER.listen()
-    print(f"Listening on {HOST}:{PORT}...")
+    print(f"Listening on {IP}:{PORT}...")
     ACCEPT_THREAD = Thread(target=accept_incoming_connections)
     ACCEPT_THREAD.start()
     ACCEPT_THREAD.join()
