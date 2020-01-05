@@ -23,3 +23,5 @@
 - ``` user_required and pass_required on server.py ``` **(It is the username and password that the attacker will use to control the bots.)**
 - ``` user and password on root_client.py ``` **(Is the username and password that will be sent when connecting)**
 - ``` IP and PORT ``` **(On server.py and client.py)**
+
+## Based on: https://gist.github.com/schedutron/cd925247bfc4f8ae7930bbd99984a441#file-chat_serv-py
