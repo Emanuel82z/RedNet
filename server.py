@@ -35,7 +35,7 @@ def handle_client(client):
             data = data.replace("'",'',2)
             data = data.split(':')
             message = data[1]
-            credentials = data[0]
+            credentials = data[0]   # the text received is( admin-admin:command )
             credentials = credentials.split('-')
             user = credentials[0]
             password = credentials[1]
