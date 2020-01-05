@@ -22,3 +22,4 @@
 ## Variables to modify
 - ``` user_required and pass_required on server.py ``` **(It is the username and password that the attacker will use to control the bots.)**
 - ``` user and password on root_client.py ``` **(Is the username and password that will be sent when connecting)**
+- ``` IP and PORT ``` **(On server.py and client.py)**
