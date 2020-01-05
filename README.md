@@ -1,6 +1,6 @@
 # **RedNet**
 
-### A UDP DDos botnet that you can flood udp packets with 255 threads.
+### A UDP DDos botnet that you can flood udp packets, with 255 threads.
 > Is under development
 
 ## Usage
