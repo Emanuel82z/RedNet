@@ -17,7 +17,6 @@
 ## Commands
 - ``` !bots ``` **Returns the number of bots actives.**
 - ``` !udpflood.start IP:PORT ``` **Starts UDP Flood DDos Attack**
-- ``` !slowloris.start IP:PORT ``` **Starts SlowLoris Attack**
 
 ## Variables to modify
 - ``` user_required and pass_required on server.py ``` **(It is the username and password that the attacker will use to control the bots.)**
