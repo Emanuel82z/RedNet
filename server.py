@@ -45,7 +45,7 @@ def handle_client(client):
                 else:
                     print("Comando recebido! Enviando aos bots!\n")
                     broadcast(message)
-        except socket.error:
+        except Exception:
             del clients[client]
             client.close()
 

