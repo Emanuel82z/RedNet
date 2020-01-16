@@ -1,5 +1,10 @@
-import socket,argparse
+import socket,argparse,platform
 from sys import exit
+
+if platform.system() == 'Linux': # Set colors to terminal
+        red = '\033[31m'
+        default_color = '\033[0;0m'
+        blue = '\033[34m'
 
 BUFFER_SIZE     = 1024
 
@@ -38,7 +43,7 @@ Github: https://github.com/ReddyyZ/RedNet\n
 def captureCommand():
     while True:
         try:
-            command = raw_input('root@fsociety# ')
+            command = raw_input(red+'root@fsociety'+default_color+':'+blue+'~'+default_color+'# ')
             if not command:
                 continue   
             elif '!exit' in command:
