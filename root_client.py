@@ -31,8 +31,8 @@ def starting():
 8 8888   `8b.   8 8888         8 8888    ,o88P'   8         `Y8o.` 8 8888             8 8888       
 8 8888     `88. 8 888888888888 8 888888888P'      8            `Yo 8 888888888888     8 8888      
 
-Coded by: Reddy
-Github: https://github.com/playerred54321\n
+Coded by: ReddyyZ
+Github: https://github.com/ReddyyZ/RedNet\n
 """
 
 def captureCommand():
