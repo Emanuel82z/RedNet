@@ -5,6 +5,9 @@ if platform.system() == 'Linux': # Set colors to terminal
         red = '\033[31m'
         default_color = '\033[0;0m'
         blue = '\033[34m'
+        os = 'Linux'
+else:
+    os = 'Windows'
 
 BUFFER_SIZE     = 1024
 
@@ -43,7 +46,10 @@ Github: https://github.com/ReddyyZ/RedNet\n
 def captureCommand():
     while True:
         try:
-            command = raw_input(red+'root@fsociety'+default_color+':'+blue+'~'+default_color+'# ')
+            if os == 'Linux':
+                command = raw_input(red+'root@fsociety'+default_color+':'+blue+'~'+default_color+'# ')
+            else:
+                command = raw_input('root@fsociety:~# ')
             if not command:
                 continue   
             elif '!exit' in command:
