@@ -6,7 +6,7 @@
 ## Usage
 
 ### Install the dependencies
-- ``` pip3 install -r requirements.txt ``` or ``` python3 -m pip install -r requirements ```
+- ``` pip3 install -r requirements.txt ``` **or** ``` python3 -m pip install -r requirements ```
 
 ### Server: Accepts connections and redirects commands to bots
 - ``` python3 server.py ``` **(It depends on the server_modules) (python3)**
